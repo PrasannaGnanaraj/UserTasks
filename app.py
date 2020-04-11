@@ -6,9 +6,7 @@ from flask_jwt_extended import (
 import random
 
 DATABASE = {}
-
 app = Flask(__name__)
-app.config.from_pyfile('config.cfg')
 
 
 @app.route('/signup', methods=['POST'])
@@ -50,7 +48,13 @@ def identity(payload):
     return DATABASE.get(user_id, None)
 
 
-jwt = JWTManager(app)
+if __name__ == '__main__':
+    jwt = JWTManager(app)
+    app.config.from_pyfile('config.cfg')
+    app.run(host='0.0.0.0')
+
+
+
 
 
 
