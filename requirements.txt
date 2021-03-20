@@ -3,7 +3,7 @@ Flask==1.1.2
 Flask-JWT-Extended==3.24.1
 gunicorn==20.0.4
 itsdangerous==1.1.0
-Jinja2==2.11.1
+Jinja2==2.11.3
 libxml2-python==2.9.9
 MarkupSafe==1.1.1
 PyJWT==1.7.1
